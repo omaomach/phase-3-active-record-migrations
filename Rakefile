@@ -1,5 +1,5 @@
 require_relative './config/environment'
-require 'sinatra/activerecord/rake'
+require 'sinatra/activerecord/rake'  # the commands listed when running rake -T are made availabe through this require
 
 desc "Runs a Pry console"
 task :console do
@@ -9,3 +9,11 @@ task :console do
   # Open a Pry session
   Pry.start
 end
+
+
+# rake commands
+# bundle exec rake db:create_migration NAME=create_artists - create a migration for setting up our artists table
+# bundle exec rake db:migrate - run our migration
+# bundle exec rake db:migrate:status - You can also use this Rake task to see the status of your migrations
+# bundle exec rake console
+# bundle exec rake db:migrate RAKE_ENV=test - This will migrate your development database as well as a test database so you will be able to run learn test.

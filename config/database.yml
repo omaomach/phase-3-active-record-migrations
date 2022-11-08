@@ -1,3 +1,5 @@
+# in this file we are telling Active Record how to connect to out db 
+
 development:
   adapter: sqlite3
   database: db/development.sqlite3
